@@ -6,6 +6,7 @@ ads.makepage('pubdd',\
              retrieve = True,\
              customcond = ''' -c 'abstract:"devil"' ''',\
              linkads = "link.spiga",\
+             addpdf = "http://dl.dropbox.com/u/11078310/my_papers/ref/",\
              title = "<h2>Publications about dust devils</h2>")
 
 ads.makepage('pubgw',\
@@ -13,6 +14,7 @@ ads.makepage('pubgw',\
              retrieve = False,\
              customcond = ''' -c 'abstract:"gravity wave"' ''',\
              linkads = "link.spiga",\
+             addpdf = "http://dl.dropbox.com/u/11078310/my_papers/ref/",\
              title = "<h2>Publications about gravity waves</h2>")
 
 ads.makepage('pubmeso',\
@@ -20,6 +22,7 @@ ads.makepage('pubmeso',\
              retrieve = False,\
              customcond = ''' -c 'abstract:"mesoscale"' ''',\
              linkads = "link.spiga",\
+             addpdf = "http://dl.dropbox.com/u/11078310/my_papers/ref/",\
              title = "<h2>Publications about mesoscale meteorology</h2>")
 
 ads.makepage('pubcloud',\
@@ -27,6 +30,7 @@ ads.makepage('pubcloud',\
              retrieve = False,\
              customcond = ''' -c 'title:"cloud"' ''',\
              linkads = "link.spiga",\
+             addpdf = "http://dl.dropbox.com/u/11078310/my_papers/ref/",\
              title = "<h2>Publications about clouds</h2>")
 
 ads.makepage('pubearth',\
@@ -34,6 +38,7 @@ ads.makepage('pubearth',\
              retrieve = False,\
              customcond = ''' -c 'title:"Earth" or title:"terrestrial" or title:"Andes"' ''',\
              linkads = "link.spiga",\
+             addpdf = "http://dl.dropbox.com/u/11078310/my_papers/ref/",\
              title = "<h2>Publications about the Earth</h2>")
 
 ads.makepage('pubmars',\
@@ -41,6 +46,7 @@ ads.makepage('pubmars',\
              retrieve = False,\
              customcond = ''' -c 'title:"Mars" or title:"martian"' ''',\
              linkads = "link.spiga",\
+             addpdf = "http://dl.dropbox.com/u/11078310/my_papers/ref/",\
              title = "<h2>Publications about Mars</h2>")
 
 ads.makepage('pubbl',\
@@ -48,6 +54,7 @@ ads.makepage('pubbl',\
              retrieve = False,\
              customcond = ''' -c 'title:"boundary layer" or title:"microscale" or title:"large-eddy simulations"' ''',\
              linkads = "link.spiga",\
+             addpdf = "http://dl.dropbox.com/u/11078310/my_papers/ref/",\
              title = "<h2>Publications about planetary boundary layer</h2>")
 
 ads.makepage('pubremote',\
@@ -55,6 +62,7 @@ ads.makepage('pubremote',\
              retrieve = False,\
              customcond = ''' -c 'title:"spectrometer"' ''',\
              linkads = "link.spiga",\
+             addpdf = "http://dl.dropbox.com/u/11078310/my_papers/ref/",\
              title = "<h2>Publications about remote sensing</h2>")
 
 ads.makepage('pub',\
@@ -62,6 +70,7 @@ ads.makepage('pub',\
              retrieve = False,\
              listyear = [2013,2012,2011,2010,2009,2008,2007],\
              linkads = "link.spiga",\
+             addpdf = "http://dl.dropbox.com/u/11078310/my_papers/ref/",\
              title = "",\
 addlink = '''
 Planet:
@@ -74,4 +83,4 @@ Topic:
 <a href="pubcloud.html">Clouds</a> /
 <a href="pubdd.html">Dust devils</a> /
 <a href="pubgw.html">Gravity waves</a>
-''')
+'''+"<br><br /><hr><br>"+open('inpress.html').read())
