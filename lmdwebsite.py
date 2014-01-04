@@ -28,34 +28,34 @@ ads.makepage('pubexo',\
 ads.makepage('pubforget',\
              retrieve = False,\
              customcond = ''' -c 'author:"Forget"' ''',\
-             listyear = range(2013,1992,-1),\
+             listyear = range(2014,1992,-1),\
              linkads = "link.LMD_planeto",\
              title = "<CENTER><H2><EM><font color='#B8860B;'>Francois Forget's peer-reviewed publications</font></EM></H2></CENTER>")
 
 ads.makepage('publebonnois',\
              retrieve = False,\
              customcond = ''' -c 'author:"Lebonnois"' ''',\
-             listyear = range(2013,1998,-1),\
+             listyear = range(2014,1998,-1),\
              linkads = "link.LMD_planeto",\
              title = "<CENTER><H2><EM><font color='#B8860B;'>Sebastien Lebonnois's peer-reviewed publications</font></EM></H2></CENTER>")
 
 ads.makepage('pubspiga',\
              retrieve = False,\
              customcond = ''' -c 'author:"Spiga"' ''',\
-             listyear = range(2013,2006,-1),\
+             listyear = range(2014,2006,-1),\
              linkads = "link.LMD_planeto",\
              title = "<CENTER><H2><EM><font color='#B8860B;'>Aymeric Spiga's peer-reviewed publications</font></EM></H2></CENTER>")
 
 ads.makepage('pubmillour',\
              retrieve = False,\
              customcond = ''' -c 'author:"Millour"' ''',\
-             listyear = range(2013,2007,-1),\
+             listyear = range(2014,2007,-1),\
              linkads = "link.LMD_planeto",\
              title = "<CENTER><H2><EM><font color='#B8860B;'>Ehouarn Millour's peer-reviewed publications</font></EM></H2></CENTER>")
 
 ads.makepage('pub',\
              retrieve = False,\
-             listyear = range(2013,1992,-1),\
+             listyear = range(2014,1992,-1),\
              linkads = "link.LMD_planeto",\
              title = "<CENTER><H2><EM><font color='#B8860B;'>Peer-reviewed publications of the LMD 'Planetary Atmospheres' team</font></EM></H2></CENTER>",\
 addlink = '''

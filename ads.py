@@ -2,7 +2,7 @@ import os, re, urllib
 
 ## -----------------------------------------------------------------
 ## Purpose: make a nice publication page with an ADS database link
-## Author: Aymeric Spiga 19/05/2012
+## Author: Aymeric Spiga 19/05/2013
 ## -----------------------------------------------------------------
 ## NB: uses BIBTEX2HTML https://www.lri.fr/~filliatr/bibtex2html/doc/manual.html
 ## ... and of course NASA ADS http://adsabs.harvard.edu/
@@ -17,7 +17,8 @@ def makepage(authorref,
              title = None,
              retrieve = True,
              addpdf = None,
-             addlink = None):
+             addlink = None,
+             target=None):
 
     htmlcontent = ""
     
@@ -36,7 +37,7 @@ def makepage(authorref,
     
     ### if linkads is None, we set it to "link.authorref"
     if linkads is None: 
-      linkads = 'link.'+authorref
+      linkads = authorref+'.link'
 
     ### GET INFO FROM ADS
     if retrieve:
@@ -168,3 +169,16 @@ def makepage(authorref,
     htmlmain = open(authorref+'.html','w')
     print >> htmlmain, htmlcontent
     htmlmain.close()
+
+    ## move results to target directory and remove txt files
+    if target is None: target=authorref+"dir"
+    target=target+"/"
+    arg = target,\
+          authorref+"*.html",\
+          authorref+"*.bib",\
+          authorref+"*.txt",\
+          target,\
+          target+linkads+".bib"
+    os.system( "mkdir -p %s ; mv %s %s %s %s ; mv %s ./" % (arg) )
+
+
