@@ -33,7 +33,7 @@ anneec = 2014 # last year to include
 
 
 ### CLEAN
-os.system('rm -rf pub*')
+os.system('rm -rf lmdall')
 
 ### GET TEAM LIST and SIZE
 nom,prenom,initiales,equipe,anneedeb,anneefin,altnom = np.loadtxt("listpeople.txt",delimiter=";",dtype='string',unpack=True,skiprows=3,comments="#")
@@ -85,7 +85,7 @@ daf.write(st)
 daf.close()
 
 ### RETRIEVE COMPLETE BIBTEX FILE
-ads.makepage('pubdummy',retrieve=True,linkads=dalink,listyear=[1950])
+ads.makepage('lmd_dummy',retrieve=True,linkads=dalink,listyear=[1950])
 
 ### LOOP ON NAMES
 miny = 9999 ; maxy = -9999 ; lk = "<br>Author:"
@@ -107,7 +107,7 @@ for iii in range(ntot):
     # 2. info
     print danom+"-"+daprenom+"-"+str(dayears)+"-"+str(dayeare)
     # 3. make page
-    ads.makepage('pub'+danom,\
+    ads.makepage('lmd_'+danom,\
                retrieve=False,\
                customcond=cc,\
                listyear=range(dayeare,dayears-1,-1),\
@@ -117,12 +117,13 @@ for iii in range(ntot):
     if dayears < miny: miny = dayears
     if dayeare > maxy: maxy = dayeare  
     # 5. get authors link list
-    lk = lk + ''' <a href="pub'''+danom+'''.html">'''+daini+" "+danom.replace('é',"&eacute;")+"</a> /"
+    lk = lk + ''' <a href="lmd_'''+danom+'''.html">'''+daini+" "+danom.replace('é',"&eacute;")+"</a> /"
 
 ### MAKE FINAL PAGE
-ads.makepage('pub',\
+ads.makepage('lmd_',\
              retrieve = False,\
              listyear = range(maxy,miny-1,-1),\
              linkads=dalink,\
              title = "<CENTER><H2><EM><font color='#B8860B;'>Peer-reviewed publications for LMD</font></EM></H2></CENTER>",\
-	     addlink = lk)
+	     addlink = lk,\
+             target = "lmdall")
