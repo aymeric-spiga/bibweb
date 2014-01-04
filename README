@@ -8,13 +8,17 @@ check the results
 then once query is all good, re-submit the same query but be sure to
 set "BibTeX with abstracts" in FORMAT
 
-copy paste the link of the submission result to your link.something file
+copy paste the link of the submission result to your *.link file
 
 note : you can set your link so that it includes the publications
 from the whole team and set filters later in the python scripts!
 
-see examples basic.py mywebsite.py lmdwebsite.py
+see example demo.py and more complex examples within folders
+
+this is free software without warranty
+if you like this please let me know
 
 A. Spiga
+aymeric.spiga@upmc.fr
 
 

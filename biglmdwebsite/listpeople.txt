@@ -1,0 +1,21 @@
+----------------------------------------------------------------------------------------------------
+NOM ; PRENOM ; INITIALES ; EQUIPE ; ANNEE DEBUT ; ANNEE FIN (0000 si présent) ; NOM 2 ('-' si aucun)
+----------------------------------------------------------------------------------------------------
+Bony ; Sandrine ; S. ; EMC3 ; 1990 ; 0000 ; -  
+Drobinski ; Philippe ; P. ; INTRO ; 2003 ; 0000 ; - 
+Crevoisier ; Cyril ; C. ; ABCT ; 2002 ; 0000 ; - 
+Flamant ; Pierre ; P. ; ABCT ; 1976 ; 0000 ; - 
+Forget ; François ; F. ; PLANETO ; 1993 ; 0000 ; - 
+Gibert ; Fabien ; F. ; ABCT ; 2006 ; 0000 ; - 
+Hourdin ; Frédéric ; F. ; EMC3 ; 1992 ; 0000 ; - 
+Lapeyre ; Guillaume ; G. ; DPAO ; 1999 ; 0000 ; -
+Lebonnois ; Sébastien ; S. ; PLANETO ; 1999 ; 0000 ; - 
+Madeleine ; Jean-Baptiste ; J.-B. ; EMC3 ; 2009 ; 0000 ; - 
+Menut ; Laurent ; L. ; INTRO ; 1999 ; 0000 ; - 
+Rio ; Catherine ; C. ; EMC3 ; 2000 ; 0000 ; - 
+Risi ; Camille ; C. ; EMC3 ; 2006 ; 0000 ; - 
+Sadourny ; Robert ; R. ; LEGACY ; 1968 ; 2002 ; - 
+Scott ; Noëlle ; N. ; ABCT ; 1981 ; 0000 ; - 
+Spiga ; Aymeric ; A. ; PLANETO ; 2007 ; 0000 ; - 
+Stubenrauch ; Claudia ; C. ; ABCT ; 1994 ; 0000 ; -
+Zeitlin ; Vladimir ; V. ; DPAO ; 1991 ; 0000 ; Tseitlin
