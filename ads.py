@@ -26,6 +26,7 @@ def makepage(authorref,
              addlink = None,
              printnum = False,
              verbose = True,
+             includemonth = False,
              target = None):
 
     htmlcontent1 = ""
@@ -65,6 +66,14 @@ def makepage(authorref,
       bibfile = open(linkads+'.bib','w')
       print >> bibfile,html
       bibfile.close()
+      ## includemonth or not
+      if not includemonth:
+        existing = open(linkads+'.bib','r').readlines()
+        new = open(linkads+'.bib','w')
+        for lines in existing:
+         if "month" not in lines:
+          new.write(lines)
+        new.close()
    
     ### if only one year and no customcond, make it useful. ask for years >= this value
     if len(listyear) == 1 and customcond is None:
@@ -167,6 +176,12 @@ def makepage(authorref,
     
     find = re.compile(r'DOI')
     htmlcontent = find.sub('Journal website',htmlcontent)
+
+    ## fix problem with accents
+    find = re.compile(r'é')
+    htmlcontent = find.sub('&eacute;',htmlcontent)
+    find = re.compile(r'è')
+    htmlcontent = find.sub('&egrave;',htmlcontent)
 
     #find = re.compile(r'.pdf')
     #htmlcontent = find.sub('PDF version',htmlcontent)
