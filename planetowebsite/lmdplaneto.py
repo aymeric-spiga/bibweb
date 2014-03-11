@@ -1,11 +1,14 @@
 #! /usr/bin/env python
 import ads
+import os
 
 #######
 lk = "lmdplaneto.link"
 anneec = 2014
 gencond = ''' -c 'not journal:"Discussions"' ''' # to solve EGU journal duplication
 #######
+
+os.chdir("/home/marshttp/trunk/UTIL/PYTHON/bibweb/planetowebsite/") ## for crontab
 
 ads.makepage('pubmars',\
              retrieve = True,\
@@ -62,7 +65,7 @@ ads.makepage('pubspiga',\
 ads.makepage('pubmillour',\
              retrieve = False,\
              customcond = gencond + ''' -c 'author:"Millour"' ''',\
-             listyear = range(anneec,2008-1,-1),\
+             listyear = range(anneec,2003-1,-1),\
              linkads = lk,\
              printnum = True,\
              title = "<CENTER><H2><EM><font color='#B8860B;'>Ehouarn Millour's peer-reviewed publications</font></EM></H2></CENTER>")
