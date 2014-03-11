@@ -1,5 +1,6 @@
 A&A
 ACP
+AdAtS
 AdSpR
 AMT
 AnGeo
@@ -19,6 +20,7 @@ CliPa
 CRASB
 CRASE
 CRASM
+CRGeo
 CNSNS
 DyAtO
 E&ES

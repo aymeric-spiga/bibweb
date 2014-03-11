@@ -15,9 +15,10 @@ titpre = "<CENTER><H2><EM><font color='#B8860B;'>" # title prefix
 titsuf = "</font></EM></H2></CENTER>" # title suffix
 anneec = 2014 # last year to include
 oneyear = None
-#oneyear = 2013
+oneyear = 2013
 usercond = None
 usercond = ''' -c 'not journal:"Discussions"' ''' # fixes the EGU Discussions journals problem
+usercond = usercond + ''' -c 'not journal:"Polymer Science"' ''' # strange inclusions
 ####
 
 ### FOLDER
@@ -91,8 +92,8 @@ for eqeq in ll:
   daf.write(st)
   daf.close()
   
-  ### RETRIEVE COMPLETE BIBTEX FILE
-  ads.makepage('lmd_dummy',retrieve=True,linkads=dalink,customcond=usercond,verbose=False)
+  ### RETRIEVE COMPLETE BIBTEX FILE (NB: does not seem to work without month)
+  ads.makepage('lmd_dummy',retrieve=True,linkads=dalink,customcond=usercond,verbose=False,includemonth=True)
  
   ### LOOP ON NAMES
   miny = 9999 ; maxy = -9999 ; lk = "<br>Author:"
@@ -125,6 +126,7 @@ for eqeq in ll:
                  title = titpre+daprenom+" "+danom+titsuf,\
                  printnum = True,\
                  verbose = False,\
+                 includemonth=True,\
                  target = folder)
       # 4. get intervals of years for the whole lab
       if oneyear is None:
@@ -144,6 +146,7 @@ for eqeq in ll:
   	       addlink = lk,\
                customcond = usercond,\
                printnum = True,\
+               includemonth=True,\
                target = folder)
 
 ### CLEAN 
