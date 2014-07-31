@@ -8,26 +8,18 @@ lk="spiga.link"
 ads.makepage('pubdd',\
              embedded = True,\
              retrieve = True,\
-             customcond = ''' -c 'abstract:"devil"' ''',\
+             customcond = ''' -c 'title:"dust storm" or title:"dust devil"' ''',\
              linkads = lk,\
              addpdf = "REF/",\
-             title = "<h2>Publications about dust devils</h2>")
+             title = "<h2>Dust storms and dust devils</h2>")
 
-ads.makepage('pubgw',\
+ads.makepage('pubsurf',\
              embedded = True,\
              retrieve = False,\
-             customcond = ''' -c 'abstract:"gravity wave"' ''',\
+             customcond = ''' -c 'abstract:"geological" or title:"surface" or abstract:"deposit"' ''',\
              linkads = lk,\
              addpdf = "REF/",\
-             title = "<h2>Publications about gravity waves</h2>")
-
-ads.makepage('pubmeso',\
-             embedded = True,\
-             retrieve = False,\
-             customcond = ''' -c 'abstract:"mesoscale"' ''',\
-             linkads = lk,\
-             addpdf = "REF/",\
-             title = "<h2>Publications about mesoscale meteorology</h2>")
+             title = "<h2>Surface-atmosphere interactions</h2>")
 
 ads.makepage('pubcloud',\
              embedded = True,\
@@ -35,7 +27,31 @@ ads.makepage('pubcloud',\
              customcond = ''' -c 'title:"cloud"' ''',\
              linkads = lk,\
              addpdf = "REF/",\
-             title = "<h2>Publications about clouds</h2>")
+             title = "<h2>Clouds</h2>")
+
+ads.makepage('pubgw',\
+             embedded = True,\
+             retrieve = False,\
+             customcond = ''' -c 'abstract:"gravity wave"' ''',\
+             linkads = lk,\
+             addpdf = "REF/",\
+             title = "<h2>Gravity waves</h2>")
+
+ads.makepage('pubbl',\
+             embedded = True,\
+             retrieve = False,\
+             customcond = ''' -c 'abstract:"turbulent" or abstract:"large-eddy"' ''',\
+             linkads = lk,\
+             addpdf = "REF/",\
+             title = "<h2>Turbulence</h2>")
+
+ads.makepage('pubkata',\
+             embedded = True,\
+             retrieve = False,\
+             customcond = ''' -c 'abstract:"katabatic"' ''',\
+             linkads = lk,\
+             addpdf = "REF/",\
+             title = "<h2>Katabatic winds</h2>")
 
 ads.makepage('pubearth',\
              embedded = True,\
@@ -43,7 +59,7 @@ ads.makepage('pubearth',\
              customcond = ''' -c 'title:"Earth" or title:"terrestrial" or title:"Andes"' ''',\
              linkads = lk,\
              addpdf = "REF/",\
-             title = "<h2>Publications about the Earth</h2>")
+             title = "<h2>the Earth</h2>")
 
 ads.makepage('pubmars',\
              embedded = True,\
@@ -51,15 +67,15 @@ ads.makepage('pubmars',\
              customcond = ''' -c 'title:"Mars" or title:"martian"' ''',\
              linkads = lk,\
              addpdf = "REF/",\
-             title = "<h2>Publications about Mars</h2>")
+             title = "<h2>Mars</h2>")
 
-ads.makepage('pubbl',\
+ads.makepage('pubsaturn',\
              embedded = True,\
              retrieve = False,\
-             customcond = ''' -c 'title:"boundary layer" or title:"microscale" or title:"large-eddy simulations"' ''',\
+             customcond = ''' -c 'title:"Saturn"' ''',\
              linkads = lk,\
              addpdf = "REF/",\
-             title = "<h2>Publications about planetary boundary layer</h2>")
+             title = "<h2>Saturn</h2>")
 
 ads.makepage('pubremote',\
              embedded = True,\
@@ -67,7 +83,15 @@ ads.makepage('pubremote',\
              customcond = ''' -c 'title:"spectrometer"' ''',\
              linkads = lk,\
              addpdf = "REF/",\
-             title = "<h2>Publications about remote sensing</h2>")
+             title = "<h2>Remote sensing</h2>")
+
+ads.makepage('pubgcm',\
+             embedded = True,\
+             retrieve = False,\
+             customcond = ''' -c 'abstract:"global climate model" or abstract:"GCM"' ''',\
+             linkads = lk,\
+             addpdf = "REF/",\
+             title = "<h2>Global Climate</h2>")
 
 ads.makepage('pub',\
              embedded = True,\
@@ -79,13 +103,16 @@ ads.makepage('pub',\
 addlink = '''
 Planet:
 <a href="pubmars.html">Mars</a> /
-<a href="pubearth.html">the Earth</a><br>
-Topic:
-<a href="pubmeso.html">Mesoscale meteorology</a> /
-<a href="pubremote.html">Remote sensing</a> / 
-<a href="pubbl.html">Planetary Boundary layer</a> /
+<a href="pubearth.html">the Earth</a> /
+<a href="pubsaturn.html">Saturn</a><br>
+Selected topics:
+<a href="pubdd.html">Dust storms and devils</a> /
 <a href="pubcloud.html">Clouds</a> /
-<a href="pubdd.html">Dust devils</a> /
-<a href="pubgw.html">Gravity waves</a>
+<a href="pubbl.html">Turbulence</a><br>
+<a href="pubgw.html">Gravity waves</a> /
+<a href="pubkata.html">Katabatic winds</a> /
+<a href="pubsurf.html">Surface &harr; Atmosphere</a><br>
+<a href="pubremote.html">Remote sensing</a> /
+<a href="pubgcm.html">Global Climate</a>
 '''+"<br><br /><hr><br>"+open('inpress.html').read(),\
              target = "spiga")
