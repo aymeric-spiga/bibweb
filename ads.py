@@ -255,7 +255,7 @@ def makepage(authorref,
     find = re.compile(r'<td align="right">')
     htmlcontent = find.sub('<td align="center" width=17% style="font-size: 75%;">',htmlcontent)
 
-    htmlcontent += '''<hr><p>Retrieved from <a href='http://adsabs.harvard.edu/'>NASA ADS</a> using python + <a href='https://www.lri.fr/~filliatr/bibtex2html/doc/manual.html'>bibTeX2HTML</a></p>'''
+    htmlcontent += '''<hr><p>Retrieved from <a href='http://adsabs.harvard.edu/'>NASA ADS</a> using <a href='https://github.com/aymeric-spiga/bibweb'>bibweb</a> + <a href='https://www.lri.fr/~filliatr/bibtex2html/doc/manual.html'>bibTeX2HTML</a></p>'''
     if embedded:
       htmlfile = open('footer.html','r')
       htmlcontent += htmlfile.read()
