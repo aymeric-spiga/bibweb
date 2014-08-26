@@ -7,6 +7,7 @@ AnGeo
 AnGla
 ApOpt
 ApJ
+ARMS
 AtmEn
 AtmRe
 AtScL
@@ -22,6 +23,12 @@ CRASE
 CRASM
 CRGeo
 CNSNS
+DSR
+DSRA
+DSROA
+DSRB
+DSRI
+DSRII
 DyAtO
 E&ES
 E&PSL
@@ -51,6 +58,7 @@ JAtS
 JCli
 JFM
 JGR
+JGRC
 JGRD
 JGRE
 JGRG
@@ -73,6 +81,7 @@ NPGeo
 OcDyn
 OcMod
 OptEn
+OptL
 P&SS
 PCEB
 PhFl
@@ -88,6 +97,7 @@ REC
 RSPTA
 RvGeo
 Sci
+SoEn
 TCry
 Tell
 TellA

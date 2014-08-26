@@ -15,6 +15,7 @@ ads.makepage('pubmars',\
              customcond = gencond + ''' -c 'title:"Mars" or title:"martian"' ''',\
              linkads = lk,\
              printnum = True,\
+             includebook = True,\
              title = "<CENTER><H2><EM><font color='#B8860B;'>Mars peer-reviewed publications of the LMD 'Planetary Atmospheres' team</font></EM></H2></CENTER>")
 
 ads.makepage('pubtitan',\
@@ -37,6 +38,13 @@ ads.makepage('pubexo',\
              linkads = lk,\
              printnum = True,\
              title = "<CENTER><H2><EM><font color='#B8860B;'>Exoplanets peer-reviewed publications of the LMD 'Planetary Atmospheres' team</font></EM></H2></CENTER>")
+
+ads.makepage('pubsaturn',\
+             retrieve = False,\
+             customcond = gencond + ''' -c 'title:"Saturn"' ''',\
+             linkads = lk,\
+             printnum = True,\
+             title = "<CENTER><H2><EM><font color='#B8860B;'>Saturn peer-reviewed publications of the LMD 'Planetary Atmospheres' team</font></EM></H2></CENTER>")
 
 ads.makepage('pubforget',\
              retrieve = False,\
@@ -70,6 +78,22 @@ ads.makepage('pubmillour',\
              printnum = True,\
              title = "<CENTER><H2><EM><font color='#B8860B;'>Ehouarn Millour's peer-reviewed publications</font></EM></H2></CENTER>")
 
+ads.makepage('pubmadeleine',\
+             retrieve = False,\
+             customcond = gencond + ''' -c 'author:"Madeleine"' ''',\
+             listyear = range(anneec,2009-1,-1),\
+             linkads = lk,\
+             printnum = True,\
+             title = "<CENTER><H2><EM><font color='#B8860B;'>Jean-Baptiste Madeleine's peer-reviewed publications</font></EM></H2></CENTER>")
+
+ads.makepage('pubguerlet',\
+             retrieve = False,\
+             customcond = gencond + ''' -c 'author:"Guerlet"' ''',\
+             listyear = range(anneec,2008-1,-1),\
+             linkads = lk,\
+             printnum = True,\
+             title = "<CENTER><H2><EM><font color='#B8860B;'>Sandrine Guerlet's peer-reviewed publications</font></EM></H2></CENTER>")
+
 ads.makepage('pub',\
              retrieve = False,\
              listyear = range(anneec,1993-1,-1),\
@@ -83,6 +107,7 @@ Planet:
 <a href="pubmars.html">Mars</a> /
 <a href="pubvenus.html">Venus</a> /
 <a href="pubtitan.html">Titan</a> /
+<a href="pubsaturn.html">Saturn</a> /
 <a href="pubexo.html">Exoplanets</a><br>
 <br>
 Author:
@@ -90,6 +115,8 @@ Author:
 <a href="publebonnois.html">S. Lebonnois</a> /
 <a href="pubmillour.html">E. Millour</a> /
 <a href="pubspiga.html">A. Spiga</a> /
+<a href="pubmadeleine.html">J.-B. Madeleine</a> /
+<a href="pubguerlet.html">S. Guerlet</a>
 <br>
 <hr>
 ''',\

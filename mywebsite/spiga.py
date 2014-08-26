@@ -2,13 +2,23 @@
 import ads
 
 ######
-lk="spiga.link"
+# fixes the EGU Discussions journals problem + do not include corrigendae
+cond = ''' -c 'not journal:"Discussions"' -c 'not title:"Correction to"' '''
 ######
+
+lk="spiga.link"
+ads.makelink(n="Spiga",
+             fn="Aymeric",
+             ini="A.",
+             name=lk)
+
+#for tests
+#lk="spiga.link.save"
 
 ads.makepage('pubdd',\
              embedded = True,\
              retrieve = True,\
-             customcond = ''' -c 'title:"dust storm" or title:"dust devil"' ''',\
+             customcond = cond + ''' -c 'title:"dust storm" or title:"dust devil"' ''',\
              linkads = lk,\
              addpdf = "REF/",\
              title = "<h2>Dust storms and dust devils</h2>")
@@ -16,7 +26,7 @@ ads.makepage('pubdd',\
 ads.makepage('pubsurf',\
              embedded = True,\
              retrieve = False,\
-             customcond = ''' -c 'abstract:"geological" or title:"surface" or abstract:"deposit"' ''',\
+             customcond = cond + ''' -c 'abstract:"geological" or title:"surface" or abstract:"deposit"' ''',\
              linkads = lk,\
              addpdf = "REF/",\
              title = "<h2>Surface-atmosphere interactions</h2>")
@@ -24,7 +34,7 @@ ads.makepage('pubsurf',\
 ads.makepage('pubcloud',\
              embedded = True,\
              retrieve = False,\
-             customcond = ''' -c 'title:"cloud"' ''',\
+             customcond = cond + ''' -c 'title:"cloud"' ''',\
              linkads = lk,\
              addpdf = "REF/",\
              title = "<h2>Clouds</h2>")
@@ -32,7 +42,7 @@ ads.makepage('pubcloud',\
 ads.makepage('pubgw',\
              embedded = True,\
              retrieve = False,\
-             customcond = ''' -c 'abstract:"gravity wave"' ''',\
+             customcond = cond + ''' -c 'abstract:"gravity wave"' ''',\
              linkads = lk,\
              addpdf = "REF/",\
              title = "<h2>Gravity waves</h2>")
@@ -40,7 +50,7 @@ ads.makepage('pubgw',\
 ads.makepage('pubbl',\
              embedded = True,\
              retrieve = False,\
-             customcond = ''' -c 'abstract:"turbulent" or abstract:"large-eddy"' ''',\
+             customcond = cond + ''' -c 'abstract:"turbulent" or abstract:"large-eddy"' ''',\
              linkads = lk,\
              addpdf = "REF/",\
              title = "<h2>Turbulence</h2>")
@@ -48,7 +58,7 @@ ads.makepage('pubbl',\
 ads.makepage('pubkata',\
              embedded = True,\
              retrieve = False,\
-             customcond = ''' -c 'abstract:"katabatic"' ''',\
+             customcond = cond + ''' -c 'abstract:"katabatic"' ''',\
              linkads = lk,\
              addpdf = "REF/",\
              title = "<h2>Katabatic winds</h2>")
@@ -56,7 +66,7 @@ ads.makepage('pubkata',\
 ads.makepage('pubearth',\
              embedded = True,\
              retrieve = False,\
-             customcond = ''' -c 'title:"Earth" or title:"terrestrial" or title:"Andes"' ''',\
+             customcond = cond + ''' -c 'title:"Earth" or title:"terrestrial" or title:"Andes"' ''',\
              linkads = lk,\
              addpdf = "REF/",\
              title = "<h2>the Earth</h2>")
@@ -64,7 +74,7 @@ ads.makepage('pubearth',\
 ads.makepage('pubmars',\
              embedded = True,\
              retrieve = False,\
-             customcond = ''' -c 'title:"Mars" or title:"martian"' ''',\
+             customcond = cond + ''' -c 'title:"Mars" or title:"martian"' ''',\
              linkads = lk,\
              addpdf = "REF/",\
              title = "<h2>Mars</h2>")
@@ -72,7 +82,7 @@ ads.makepage('pubmars',\
 ads.makepage('pubsaturn',\
              embedded = True,\
              retrieve = False,\
-             customcond = ''' -c 'title:"Saturn"' ''',\
+             customcond = cond + ''' -c 'title:"Saturn"' ''',\
              linkads = lk,\
              addpdf = "REF/",\
              title = "<h2>Saturn</h2>")
@@ -80,7 +90,7 @@ ads.makepage('pubsaturn',\
 ads.makepage('pubremote',\
              embedded = True,\
              retrieve = False,\
-             customcond = ''' -c 'title:"spectrometer"' ''',\
+             customcond = cond + ''' -c 'title:"spectrometer"' ''',\
              linkads = lk,\
              addpdf = "REF/",\
              title = "<h2>Remote sensing</h2>")
@@ -88,7 +98,7 @@ ads.makepage('pubremote',\
 ads.makepage('pubgcm',\
              embedded = True,\
              retrieve = False,\
-             customcond = ''' -c 'abstract:"global climate model" or abstract:"GCM"' ''',\
+             customcond = cond + ''' -c 'abstract:"global climate model" or abstract:"GCM"' ''',\
              linkads = lk,\
              addpdf = "REF/",\
              title = "<h2>Global Climate</h2>")
@@ -96,6 +106,7 @@ ads.makepage('pubgcm',\
 ads.makepage('pub',\
              embedded = True,\
              retrieve = False,\
+             customcond = cond,\
              listyear = [2014,2013,2012,2011,2010,2009,2008,2007],\
              linkads = lk,\
              addpdf = "REF/",\
