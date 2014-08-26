@@ -8,7 +8,7 @@ anneec = 2014
 gencond = ''' -c 'not journal:"Discussions"' ''' # to solve EGU journal duplication
 #######
 
-os.chdir("/home/marshttp/trunk/UTIL/PYTHON/bibweb/planetowebsite/") ## for crontab
+os.chdir("/home/marshttp/bibweb/planetowebsite/") ## for crontab
 
 ads.makepage('pubmars',\
              retrieve = True,\
