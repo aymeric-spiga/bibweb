@@ -82,6 +82,7 @@ def makepage(authorref,
              verbose = True,
              includemonth = False,
              includebook = False,
+             abstractin = None,
              target = None):
 
     htmlcontent1 = ""
@@ -199,7 +200,7 @@ def makepage(authorref,
            header = '<a name="%.0f"></a>' % (year)
            header += "<h3>%.0f <a href=''>.</a> </h3>" % (year)
            if printnum: header += "("+printpubli(numpubli)+")"
-           if embedded: header += '<br>'
+           if embedded: header += '<p></p>'
         else:
            header = ''
            #if printnum: header += "("+printpubli(numpubli)+")"
@@ -209,9 +210,11 @@ def makepage(authorref,
               bibstyle,\
               header,\
               author+'.bib'
-        cmd = "bibtex2html -q \
-              --both \
-              -m ads.tex \
+        if abstractin is None: char = " --both "
+        else:
+          if abstractin: char = " "
+          else: char = " --no-abstract "
+        cmd = "bibtex2html -q"+char+"-m ads.tex \
               %s \
               -nf adsurl 'ADS link' \
               -nf localpdf 'PDF version' \
