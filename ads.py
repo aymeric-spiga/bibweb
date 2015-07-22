@@ -124,6 +124,10 @@ def makepage(authorref,
         html = find.sub('ARTICLE',html)
         find = re.compile(r'booktitle')
         html = find.sub('journal',html)
+      ## the strange JQSRT bug
+      find = re.compile(r"\\jqsrt")
+      html = find.sub(r"Journal of Quantitative Spectroscopy and Radiative Transfer",html)
+
       ##
       bibfile = open(linkads+'.bib','w')
       print >> bibfile,html
