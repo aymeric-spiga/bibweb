@@ -4,7 +4,7 @@ import os
 
 #######
 lk = "lmdplaneto.link"
-anneec = 2014
+anneec = 2015
 gencond = ''' -c 'not journal:"Discussions"' ''' # to solve EGU journal duplication
 #######
 
@@ -78,13 +78,13 @@ ads.makepage('pubmillour',\
              printnum = True,\
              title = "<CENTER><H2><EM><font color='#B8860B;'>Ehouarn Millour's peer-reviewed publications</font></EM></H2></CENTER>")
 
-ads.makepage('pubmadeleine',\
-             retrieve = False,\
-             customcond = gencond + ''' -c 'author:"Madeleine"' ''',\
-             listyear = range(anneec,2009-1,-1),\
-             linkads = lk,\
-             printnum = True,\
-             title = "<CENTER><H2><EM><font color='#B8860B;'>Jean-Baptiste Madeleine's peer-reviewed publications</font></EM></H2></CENTER>")
+#ads.makepage('pubmadeleine',\
+#             retrieve = False,\
+#             customcond = gencond + ''' -c 'author:"Madeleine"' ''',\
+#             listyear = range(anneec,2009-1,-1),\
+#             linkads = lk,\
+#             printnum = True,\
+#             title = "<CENTER><H2><EM><font color='#B8860B;'>Jean-Baptiste Madeleine's peer-reviewed publications</font></EM></H2></CENTER>")
 
 ads.makepage('pubguerlet',\
              retrieve = False,\
@@ -115,7 +115,6 @@ Author:
 <a href="publebonnois.html">S. Lebonnois</a> /
 <a href="pubmillour.html">E. Millour</a> /
 <a href="pubspiga.html">A. Spiga</a> /
-<a href="pubmadeleine.html">J.-B. Madeleine</a> /
 <a href="pubguerlet.html">S. Guerlet</a>
 <br>
 <hr>
