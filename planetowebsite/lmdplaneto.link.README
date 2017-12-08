@@ -1,0 +1,11 @@
+aller sur http://adsabs.harvard.edu/abstract_service.html
+cocher toutes les databases y compris physics
+remplir les auteurs
+changer la limite item à 999
+select All refereed articles
+Sort by date (most recent first)
+format: BibTeX with abstracts
+
+send query
+puis récupérer le liene et le mettre dans lmdplaneto.link
+

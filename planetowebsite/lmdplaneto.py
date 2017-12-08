@@ -4,7 +4,7 @@ import os
 
 #######
 lk = "lmdplaneto.link"
-anneec = 2015
+anneec = 2018
 gencond = ''' -c 'not journal:"Discussions"' ''' # to solve EGU journal duplication
 #######
 
