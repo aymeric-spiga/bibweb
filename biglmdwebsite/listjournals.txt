@@ -2,9 +2,11 @@ A&A
 ACP
 AdAtS
 AdSpR
+AmJPh
 AMT
 AnGeo
 AnGla
+AnPh
 ApOpt
 ApJ
 APJAS
@@ -26,10 +28,15 @@ Chaos
 ClCh
 ClDy
 CliPa
+CR
+CR2
+CRAS
 CRASB
 CRASE
 CRASM
+CRASP
 CRGeo
+CRPhy
 CNSNS
 DSR
 DSRA
@@ -86,6 +93,13 @@ JMetR
 JMoSp
 JMR
 JMTAS
+JPhA
+JPhys
+JPhyC
+JPhy1
+JPhy2
+JPhy3
+JPhy4
 JPO
 JQSRT
 JReAt
@@ -112,6 +126,7 @@ P&SS
 PCEB
 PGC
 PhFl
+PhFlA
 PhLA
 PhRvL
 PhT
@@ -124,6 +139,7 @@ REC
 RSEnv
 RSPTA
 RvGeo
+RvPA
 Sci
 SHH
 SoEn
