@@ -190,7 +190,7 @@ def makepage(authorref,
                 bibcontent += line
                 if 'adsurl' in line:
                     line = line.replace('adsurl','localpdf')
-                    line = line.replace('http://adsabs.harvard.edu/abs/',addpdf)
+                    line = line.replace('https://ui.adsabs.harvard.edu/abs/',addpdf)
                     line = line.replace('},','.pdf},')
                     line = line.replace('%','_')
                     bibcontent += line
